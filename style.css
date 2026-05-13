@@ -1,146 +1,3 @@
-/* ===== Neon Gamer Theme ===== */
-
-body {
-  margin: 0;
-  font-family: 'Orbitron', sans-serif;
-  background: #0a0a0f;
-  color: #e0e0ff;
-}
-
-/* Header */
-.top-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background: #0f0f1a;
-  border-bottom: 2px solid #00eaff;
-  box-shadow: 0 0 15px #00eaff;
-}
-
-.logo {
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: #00eaff;
-}
-
-.logo span {
-  color: #ff00ff;
-}
-
-nav a {
-  margin-left: 20px;
-  color: #e0e0ff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  color: #00eaff;
-  text-shadow: 0 0 10px #00eaff;
-}
-
-/* Hero Section */
-.hero {
-  height: 60vh;
-  background: linear-gradient(135deg, #0a0a0f, #1a0033);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 40px;
-  color: #e0e0ff;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  text-shadow: 0 0 15px #ff00ff;
-}
-
-.btn-primary {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: #00eaff;
-  color: #0a0a0f;
-  font-weight: bold;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.btn-primary:hover {
-  background: #ff00ff;
-  box-shadow: 0 0 15px #ff00ff;
-}
-
-/* Sections */
-.section {
-  padding: 60px 20px;
-}
-
-.section-alt {
-  background: #0f0f1a;
-}
-
-h2 {
-  text-align: center;
-  font-size: 2rem;
-  color: #00eaff;
-  text-shadow: 0 0 10px #00eaff;
-}
-
-/* Cards */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
-}
-
-.card {
-  background: #1a0033;
-  padding: 20px;
-  border-radius: 10px;
-  border: 2px solid #ff00ff;
-  box-shadow: 0 0 15px #ff00ff;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 25px #00eaff;
-}
-
-/* Two-column layout */
-.two-column {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-}
-
-.about-card {
-  background: #1a0033;
-  padding: 20px;
-  border-radius: 10px;
-  border: 2px solid #00eaff;
-  box-shadow: 0 0 15px #00eaff;
-}
-
-/* Contact */
-.contact-list li {
-  margin: 10px 0;
-}
-
-/* Footer */
-.footer {
-  text-align: center;
-  padding: 20px;
-  background: #0f0f1a;
-  border-top: 2px solid #00eaff;
-  box-shadow: 0 0 15px #00eaff;
-}
 /* ===== Loader Styles ===== */
 #loader {
   position: fixed;
@@ -181,8 +38,127 @@ h2 {
   }
 }
 
-/* Hide loader when page is ready */
 body.loaded #loader {
   opacity: 0;
   pointer-events: none;
+}
+
+/* ===== Neon Gamer Theme ===== */
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: #0a0a0f;
+  color: #e0e0ff;
+}
+
+/* Header */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #0f0f1a;
+  border-bottom: 2px solid #00eaff;
+  box-shadow: 0 0 15px #00eaff;
+}
+
+.logo {
+  color: #00eaff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #ffffff;
+}
+
+nav a {
+  margin-left: 20px;
+  color: #00eaff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+/* Hero */
+.hero {
+  padding: 100px 20px;
+  text-align: center;
+  background: linear-gradient(180deg, #0a0a0f, #0f0f1a);
+}
+
+.hero h1 {
+  font-size: 40px;
+  color: #00eaff;
+  text-shadow: 0 0 15px #00eaff;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #00eaff;
+  color: #000;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 15px #00eaff;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #ffffff;
+  box-shadow: 0 0 25px #00eaff;
+}
+
+/* Sections */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-alt {
+  background: #0f0f1a;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background: #11111d;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+  border: 2px solid #00eaff;
+  box-shadow: 0 0 15px #00eaff;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px #00eaff;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #0f0f1a;
+  border-top: 2px solid #00eaff;
+  box-shadow: 0 0 15px #00eaff;
 }
