@@ -1,164 +1,121 @@
-/* ===== Loader Styles ===== */
-#loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #000000;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  transition: opacity 0.6s ease;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nicholas | Curriculum Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-#loader p {
-  color: #0ff;
-  font-family: 'Orbitron', sans-serif;
-  margin-top: 15px;
-  font-size: 20px;
-  text-shadow: 0 0 10px #0ff;
-}
+<body>
 
-.spinner {
-  width: 60px;
-  height: 60px;
-  border: 6px solid #0ff;
-  border-top: 6px solid transparent;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  box-shadow: 0 0 20px #0ff;
-}
+  <!-- Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+    <p>Loading...</p>
+  </div>
 
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
+  <!-- Header -->
+  <header class="top-bar">
+    <div class="logo">Nicholas<span>Curriculum</span></div>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#goals">Goals</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-body.loaded #loader {
-  opacity: 0;
-  pointer-events: none;
-}
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Nicholas’s Curriculum Website</h1>
+      <p>This site shows my skills, goals, projects, and everything I’m learning.</p>
+      <a href="#about" class="btn-primary">Start Exploring</a>
+    </div>
+  </section>
 
-/* ===== Neon Gamer Theme ===== */
+  <!-- About Me -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>Hi! I’m Nicholas, and this website shows my journey, skills, and goals.</p>
+  </section>
 
-body {
-  margin: 0;
-  font-family: 'Orbitron', sans-serif;
-  background: #0a0a0f;
-  color: #e0e0ff;
-}
+  <!-- Skills -->
+  <section id="skills" class="section section-alt">
+    <h2>Skills</h2>
+    <div class="cards">
+      <article class="card">
+        <h3>Communication</h3>
+        <p>I communicate clearly and work well with others.</p>
+      </article>
+      <article class="card">
+        <h3>Problem Solving</h3>
+        <p>I enjoy solving challenges and thinking creatively.</p>
+      </article>
+      <article class="card">
+        <h3>Learning</h3>
+        <p>I’m always improving and learning new things.</p>
+      </article>
+    </div>
+  </section>
 
-/* Header */
-.top-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background: #0f0f1a;
-  border-bottom: 2px solid #00eaff;
-  box-shadow: 0 0 15px #00eaff;
-}
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="cards">
+      <article class="card">
+        <h3>Website Project</h3>
+        <p>This website is one of my projects!</p>
+      </article>
+      <article class="card">
+        <h3>Future Projects</h3>
+        <p>More cool things coming soon.</p>
+      </article>
+    </div>
+  </section>
 
-.logo {
-  color: #00eaff;
-  font-size: 24px;
-  font-weight: bold;
-}
+  <!-- Goals -->
+  <section id="goals" class="section section-alt">
+    <h2>Goals</h2>
+    <div class="cards">
+      <article class="card">
+        <h3>Short-Term Goals</h3>
+        <p>Learn more coding and build more projects.</p>
+      </article>
+      <article class="card">
+        <h3>Long-Term Goals</h3>
+        <p>Become confident with coding, build a portfolio, and create real projects.</p>
+      </article>
+    </div>
+  </section>
 
-.logo span {
-  color: #ffffff;
-}
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>If you want to reach me, here’s how:</p>
+    <ul class="contact-list">
+      <li><strong>Email:</strong> your-email@example.com</li>
+    </ul>
+  </section>
 
-nav a {
-  margin-left: 20px;
-  color: #00eaff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© <span id="year"></span> Nicholas – Curriculum Website</p>
+  </footer>
 
-nav a:hover {
-  color: #ffffff;
-  text-shadow: 0 0 10px #00eaff;
-}
+  <!-- Year Script -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
-/* Hero */
-.hero {
-  padding: 100px 20px;
-  text-align: center;
-  background: linear-gradient(180deg, #0a0a0f, #0f0f1a);
-}
+  <!-- Loader Script -->
+  <script>
+    window.addEventListener("load", () => {
+      document.body.classList.add("loaded");
+    });
+  </script>
 
-.hero h1 {
-  font-size: 40px;
-  color: #00eaff;
-  text-shadow: 0 0 15px #00eaff;
-}
-
-.hero p {
-  font-size: 18px;
-  margin-top: 10px;
-}
-
-.btn-primary {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: #00eaff;
-  color: #000;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 0 15px #00eaff;
-  transition: 0.3s;
-}
-
-.btn-primary:hover {
-  background: #ffffff;
-  box-shadow: 0 0 25px #00eaff;
-}
-
-/* Sections */
-.section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.section-alt {
-  background: #0f0f1a;
-}
-
-.cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.card {
-  background: #11111d;
-  padding: 20px;
-  width: 250px;
-  border-radius: 10px;
-  border: 2px solid #00eaff;
-  box-shadow: 0 0 15px #00eaff;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 25px #00eaff;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #0f0f1a;
-  border-top: 2px solid #00eaff;
-  box-shadow: 0 0 15px #00eaff;
-}
+</body>
+</html>
