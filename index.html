@@ -3,11 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nicholas – Curriculum Website</title>
+  <title>Nicholas | Curriculum Website</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+
+  <!-- Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+    <p>Loading...</p>
+  </div>
+
   <!-- Header -->
   <header class="top-bar">
     <div class="logo">Nicholas<span>Curriculum</span></div>
@@ -32,67 +39,51 @@
   <!-- About Me -->
   <section id="about" class="section">
     <h2>About Me</h2>
-    <div class="two-column">
-      <div>
-        <p>Hi! I’m <strong>Nicholas</strong>. This website is a place to track my learning, projects, and progress.</p>
-        <p>I’m building this site to practice coding, organization, and creating a personal portfolio.</p>
-      </div>
-      <div class="about-card">
-        <ul>
-          <li><strong>Location:</strong> Memphis, TN</li>
-          <li><strong>Interests:</strong> Technology, learning, creativity</li>
-          <li><strong>Working On:</strong> Web development, personal projects</li>
-        </ul>
-      </div>
-    </div>
+    <p>Hi! I’m Nicholas, and this website shows my journey, skills, and goals.</p>
   </section>
 
   <!-- Skills -->
   <section id="skills" class="section section-alt">
-    <h2>My Skills</h2>
+    <h2>Skills</h2>
     <div class="cards">
       <article class="card">
-        <h3>Web Development</h3>
-        <p>Learning HTML, CSS, and building websites like this one.</p>
+        <h3>Communication</h3>
+        <p>I communicate clearly and work well with others.</p>
       </article>
-
       <article class="card">
         <h3>Problem Solving</h3>
-        <p>I enjoy figuring out how things work and improving them.</p>
+        <p>I enjoy solving challenges and thinking creatively.</p>
       </article>
-
       <article class="card">
-        <h3>Creativity</h3>
-        <p>I like designing, planning, and creating new ideas.</p>
+        <h3>Learning</h3>
+        <p>I’m always improving and learning new things.</p>
       </article>
     </div>
   </section>
 
   <!-- Projects -->
   <section id="projects" class="section">
-    <h2>My Projects</h2>
+    <h2>Projects</h2>
     <div class="cards">
       <article class="card">
-        <h3>Curriculum Website</h3>
-        <p>This website is my first big project. It shows my progress and skills.</p>
+        <h3>Website Project</h3>
+        <p>This website is one of my projects!</p>
       </article>
-
       <article class="card">
-        <h3>Future Project</h3>
-        <p>More projects will be added here as I learn new things.</p>
+        <h3>Future Projects</h3>
+        <p>More cool things coming soon.</p>
       </article>
     </div>
   </section>
 
   <!-- Goals -->
   <section id="goals" class="section section-alt">
-    <h2>My Goals</h2>
+    <h2>Goals</h2>
     <div class="cards">
       <article class="card">
         <h3>Short-Term Goals</h3>
-        <p>Learn HTML & CSS, finish this website, and start building more pages.</p>
+        <p>Learn more coding and build more projects.</p>
       </article>
-
       <article class="card">
         <h3>Long-Term Goals</h3>
         <p>Become confident with coding, build a portfolio, and create real projects.</p>
@@ -114,8 +105,17 @@
     <p>© <span id="year"></span> Nicholas – Curriculum Website</p>
   </footer>
 
+  <!-- Year Script -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
+  <!-- Loader Script -->
+  <script>
+    window.addEventListener("load", () => {
+      document.body.classList.add("loaded");
+    });
+  </script>
+
 </body>
 </html>
